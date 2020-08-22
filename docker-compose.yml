@@ -1,0 +1,13 @@
+version: "3"
+services:
+  bot:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "9222:9222"
+    restart: always
+    volumes:
+      - ./yobot:/home/bot/yobot
+      - ./go-cqhttp:/home/bot/go-cqhttp
+
