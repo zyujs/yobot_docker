@@ -20,4 +20,4 @@
 
 部署完成后使用命令 `sudo docker logs 实例名` 查看日志, 如果提示需要输入验证码或前往网址验证,请使用命令 `sudo docker attach 实例名` 进入容器完成登录验证程序, 实例名在部署过程中有显示, 或者使用命令 `sudo docker ps` 查看.
 
-由于脚本修改了yobot/src/client/packedfiles/default_config.json以写入access_token, 会影响yobot自动更新, 请在机器人功能验证无误后, 在本项目根目录执行命令 `git checkout -f yobot/src/client/packedfiles/default_config.json` 清除修改.
+由于脚本修改了yobot/src/client/packedfiles/default_config.json以写入access_token, 会影响yobot自动更新, 请在机器人功能验证无误后, 在yobot目录中执行命令 `git checkout -f src/client/packedfiles/default_config.json` 清除修改.
