@@ -1,3 +1,4 @@
+.env
 test.sh
 /yobot/
 /go-cqhttp/*

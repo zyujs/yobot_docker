@@ -34,4 +34,6 @@ if [ -f "yobot/src/client/yobot_data/yobot_config.json" ]; then
   sed -i 's/\("access_token":\).*/\1\ "'"$token"'",/' yobot/src/client/yobot_data/yobot_config.json
 fi
 
+echo "PUID=$UID" > .env
+
 sudo docker-compose up -d

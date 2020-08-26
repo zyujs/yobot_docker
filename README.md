@@ -7,6 +7,7 @@
 1. 在本项目根目录下 `git clone https://github.com/pcrbot/yobot.git`
 1. 将./go-cqhttp/config_template.json复制为./go-cqhttp/config.json
 1. 修改./go-cqhttp/config.json中对应qq号和密码，并且参照yobot文档进行相关配置, 如果提供外网web访问, 还需要设置 `access_token` 相关项目.
+1. 使用 `id` 命令查看当前用户uid, 如果不是默认值1000, 请执行命令 `echo "PUID=$UID" > .env` 生成.env文件
 1. 执行 `sudo docker-compose up -d` 开始构建
 1. 构建完成后, 执行 `sudo docker attach 生成的实例名`, 进行第一次登录QQ的验证程序.
 

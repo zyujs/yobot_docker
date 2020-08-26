@@ -5,8 +5,12 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - "9222:9222"
+      - "9221:9222"
     restart: always
+    build:
+      context: .
+      args:
+        - PUID=${PUID}
     volumes:
       - ./yobot:/home/bot/yobot
       - ./go-cqhttp:/home/bot/go-cqhttp
