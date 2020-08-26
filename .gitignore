@@ -1,0 +1,5 @@
+test.sh
+/yobot/
+/go-cqhttp/*
+!/go-cqhttp/config.json
+

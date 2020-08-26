@@ -7,6 +7,9 @@
 	"access_token": "",
 	"relogin": true,
 	"relogin_delay": 3,
+	"post_message_format": "string",
+	"ignore_invalid_cqcode": false,
+	"force_fragmented": true,
 	"http_config": {
 		"enabled": false,
 		"host": "0.0.0.0",
