@@ -17,7 +17,7 @@ if [ ! -n "$password" ]; then
 fi
 
 cd go-cqhttp
-wget -O "go-cqhttp.tar.gz" "https://hub.fastgit.org/Mrs4s/go-cqhttp/releases/download/v0.9.22/go-cqhttp-v0.9.22-linux-amd64.tar.gz"
+wget -O "go-cqhttp.tar.gz" "https://github.com/Mrs4s/go-cqhttp/releases/download/v0.9.22/go-cqhttp-v0.9.22-linux-amd64.tar.gz"
 tar -xzf go-cqhttp.tar.gz
 chmod +x go-cqhttp
 cd ..
@@ -25,6 +25,7 @@ git clone https://github.com/pcrbot/yobot.git
 
 token=`openssl rand -hex 16`
 echo generate token : $token
+cp go-cqhttp/config_template.json go-cqhttp/config.json
 sed -i 's/\("uin":\).*/\1\ '"$qq"',/' go-cqhttp/config.json
 sed -i 's/\("password":\).*/\1\ "'"$password"'",/' go-cqhttp/config.json
 sed -i 's/\("access_token":\).*/\1\ "'"$token"'",/' go-cqhttp/config.json
@@ -33,9 +34,4 @@ if [ -f "$file" ]; then
   sed -i 's/\("access_token":\).*/\1\ "'"$token"'",/' yobot/src/client/yobot_data/yobot_config.json
 fi
 
-sudo docker-compose up -d --build
-
-cd yobot
-git checkout -f src/client/packedfiles/default_config.json
-cd ..
-
+sudo docker-compose up -d

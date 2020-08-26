@@ -1,5 +1,5 @@
 test.sh
 /yobot/
 /go-cqhttp/*
-!/go-cqhttp/config.json
+!/go-cqhttp/config_template.json
 
